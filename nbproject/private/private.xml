@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/main/Main.java</file>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/core/megaferia/MegaFeria.java</file>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/core/megaferia/Stand.java</file>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/core/megaferia/editorial/Editorial.java</file>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/core/megaferia/libros/Libro.java</file>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/core/persona/Persona.java</file>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/core/persona/Autor.java</file>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/core/persona/Gerente.java</file>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/core/megaferia/libros/LibroDigital.java</file>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/core/megaferia/libros/AudioLibro.java</file>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/core/megaferia/libros/LibroImpreso.java</file>
+            <file>file:/C:/Users/danie/Documents/NetBeansProjects/MegaFerias/src/core/persona/Narrador.java</file>
+        </group>
+    </open-files>
+</project-private>
