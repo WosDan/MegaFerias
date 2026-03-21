@@ -40,7 +40,21 @@ public class Editorial {
     }
     
     public ArrayList<Autor> obtenerAutores(){
-        return new ArrayList<Autor>();
+        ArrayList<Autor> autores = new ArrayList<Autor>();
+        
+        for(Libro libro : libros){
+            for(Autor autor : libro.getAutores()){
+                if(!autores.contains(autor)){
+                    autores.add(autor);
+                }
+            }
+        }
+        
+        return autores;
+    }
+    
+    public void addLibro(Libro libro){
+        libros.add(libro);
     }
 
     public String getNit() {

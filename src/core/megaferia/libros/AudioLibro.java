@@ -21,6 +21,7 @@ public class AudioLibro extends Libro{
         super(titulo, autores, isbn, genero, formato, valor, editorial);
         this.duracion = duracion;
         this.narrador = narrador;
+        narrador.addAudioLibro(this);
     }
 
     public int getDuracion() {

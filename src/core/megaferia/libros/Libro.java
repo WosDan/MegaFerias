@@ -29,6 +29,10 @@ public class Libro {
         this.formato = formato;
         this.valor = valor;
         this.editorial = editorial;
+        for(Autor autor : autores){
+            autor.addLibro(this);
+        }
+        editorial.addLibro(this);
     }
 
     public String getTitulo() {

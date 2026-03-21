@@ -27,19 +27,76 @@ public class MegaFeria {
     }
     
     public ArrayList<Libro> buscarLibros(Autor autor){
-        return new ArrayList<Libro>();
+        ArrayList<Libro> librosPorAutor = new ArrayList<Libro>();
+        for(Editorial editorial : editoriales){
+            ArrayList<Libro> libros = editorial.getLibros();
+            for(Libro libro : libros){
+                ArrayList<Autor> autores = libro.getAutores();
+                if(autores.contains(autor)){
+                    librosPorAutor.add(libro);
+                }
+            }         
+        }
+        
+        return librosPorAutor;
     }
     
     public ArrayList<Libro> buscarLibros(String formato){
-        return new ArrayList<Libro>();
+        ArrayList<Libro> librosPorFormato = new ArrayList<Libro>();
+        for(Editorial editorial : editoriales){
+            ArrayList<Libro> libros = editorial.getLibros();
+            for(Libro libro : libros){
+                if(formato.equals(libro.getFormato())){
+                    librosPorFormato.add(libro);
+                }
+            }         
+        }
+        
+        return librosPorFormato;
     }
     
     public ArrayList<String> buscarFormatos(String nombreLibro){
-        return new ArrayList<String>();
+        ArrayList<String> formatos = new ArrayList<String>();
+        for(Editorial editorial : editoriales){
+            ArrayList<Libro> libros = editorial.getLibros();
+            for(Libro libro : libros){
+                String titulo = libro.getTitulo();                
+                String formato = libro.getFormato();
+                if(nombreLibro.equals(titulo) && !formatos.contains(formato)){
+                    formatos.add(formato);
+                }
+            }         
+        }
+        return formatos;
     }
     
     public Autor obtenerAutorMaxEditoriales(){
-        return new Autor(new ArrayList<Libro>(), "", 0);
+        int maxEditoriales = 0;
+        
+        for(Editorial editorial : editoriales){
+            ArrayList<Autor> autores = editorial.obtenerAutores();
+            for(Autor autor : autores){
+                int editorialesDelAutor = autor.obtenerNumEditoriales();
+                if(editorialesDelAutor >= maxEditoriales){
+                    maxEditoriales = editorialesDelAutor;
+                }
+            }         
+        }
+        
+        ArrayList<Autor> autoresConMasEditoriales = new ArrayList<Autor>();
+        for(Editorial editorial : editoriales){
+            ArrayList<Autor> autores = editorial.obtenerAutores();
+            for(Autor autor : autores){
+                if(autor.obtenerNumEditoriales() == maxEditoriales){
+                    autoresConMasEditoriales.add(autor);
+                }
+            }
+        }
+        
+        //Hice que retornara el autor con mas editoriales de forma aleatoria entre
+        //los que más tiene. Por qué, porque en el UML sale que debe retornar Autor,
+        //y no Lista de Autores, y me pareció que era más gracioso así.
+        return autoresConMasEditoriales.get((int) (Math.random() * (autoresConMasEditoriales.size())));
     }
     
     private ArrayList<Stand> crearStands(){
