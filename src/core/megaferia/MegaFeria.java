@@ -19,6 +19,7 @@ public class MegaFeria {
 
     public MegaFeria() {
         this.stands = crearStands();
+        editoriales = new ArrayList<Editorial>();
     }
     
     public MegaFeria(ArrayList<Editorial> editoriales) {
@@ -110,6 +111,16 @@ public class MegaFeria {
     public ArrayList<Stand> getStands() {
         return stands;
     }
+    
+    public Stand getStand(int id){
+        for(Stand stand : stands){
+            if(stand.getId() == id){
+                return stand;
+            }
+        }
+        
+        return null;
+    }
 
     public void setStands(ArrayList<Stand> stands) {
         this.stands = stands;
@@ -121,5 +132,9 @@ public class MegaFeria {
 
     public void setEditoriales(ArrayList<Editorial> editoriales) {
         this.editoriales = editoriales;
+    }
+    
+    public void addEditorial(Editorial editorial){
+        editoriales.add(editorial);
     }
 }

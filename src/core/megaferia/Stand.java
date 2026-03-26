@@ -19,6 +19,7 @@ public class Stand {
     public Stand(int id, float precio) {
         this.id = id;
         this.precio = precio;
+        editoriales = new ArrayList<Editorial>();
     }
 
     public int getId() {
@@ -45,5 +46,8 @@ public class Stand {
         this.editoriales = editoriales;
     }
     
+    public void addEditorial(Editorial editorial){
+        editoriales.add(editorial);
+    }
     
 }

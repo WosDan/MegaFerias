@@ -105,5 +105,8 @@ public class Editorial {
         this.stands = stands;
     }
     
+    public void addStand(Stand stand){
+        this.stands.add(stand);
+    }
     
 }
